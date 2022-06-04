@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>She Codes Plus</title>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather">
+        <header>
+          <ul class="items">
+            <li class="item">
+              <a href="/berlin">Berlin</a>
+            </li>
+            <li class="item">
+              <a href="/paris">London</a>
+            </li>
+            <li class="item">
+              <a href="/sydney">Toronto</a>
+            </li>
+            <li class="item">
+              <a href="/san-francisco">San Francisco</a>
+            </li>
+          </ul>
+        </header>
+        <form class="search-form" id="searchCity">
+          <div class="row">
+            <div class="col-8">
+              <input
+                id="searchCityInput"
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-2">
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-primary shadow-sm"
+              />
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-success" id="currentBtn">
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <h1>Dresden</h1>
+        <div class="details" id="times">Sunday 14:00</div>
+        <div class="details" id="sky">Cloudy</div>
+
+        <div class="row">
+          <div class="col-6">
+            <div class="leftside">
+              <div class="cloudy-icon">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="Cloudy icon"
+                  class="weather-icon float-left"
+                />
+              </div>
+            </div>
+            <div class="weather-today">
+              <span class="temperature" id="temperatur">19</span>
+              <span class="units">
+                <a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="precipitation">
+              <br />
+              <br />
+              Precipitation: 50%
+              <br />
+              Wind: 6km/h
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="forecast-day">Mon</div>
+            <div class="emoji">☀️</div>
+            <div class="forecast-temperature">20°</div>
+          </div>
+          <div class="col-sm-2">
+            <div class="forecast-day">Tue</div>
+            <div class="emoji">☀️</div>
+            <div class="forecast-temperature">18°</div>
+          </div>
+          <div class="col-sm-2">
+            <div class="forecast-day">Wen</div>
+            <div class="emoji">☁️</div>
+            <div class="forecast-temperature">19°</div>
+          </div>
+          <div class="col-sm-2">
+            <div class="forecast-day">Thu</div>
+            <div class="emoji">🌧️</div>
+            <div class="forecast-temperature">22°</div>
+          </div>
+          <div class="col-sm-2">
+            <div class="forecast-day">Fri</div>
+            <div class="emoji">☁️</div>
+            <div class="forecast-temperature">20°</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
