@@ -124,3 +124,10 @@ li {
 .details:first-letter {
   text-transform: capitalize;
 }
+.weather-today .active {
+  color: black;
+  cursor: default;
+}
+.weather-today .active:hover {
+  text-decoration: none;
+}

@@ -3,6 +3,8 @@ let celsiusTemperature;
 function changeFar(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#temperatur");
+  celClick.classList.remove("active");
+  farClick.classList.add("active");
   let farTemp = (celsiusTemperature * 9) / 5 + 32;
   tempElement.innerHTML = Math.round(farTemp);
 }
@@ -12,6 +14,8 @@ farClick.addEventListener("click", changeFar);
 function changeCel(event) {
   event.preventDefault();
   let temp = document.querySelector("#temperatur");
+  celClick.classList.add("active");
+  farClick.classList.remove("active");
   temp.innerHTML = celsiusTemperature;
 }
 let celClick = document.querySelector("#celsius-link");
