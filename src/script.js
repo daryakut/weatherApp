@@ -80,6 +80,11 @@ function showWeather(response) {
   let windElement = document.querySelector("#wind");
   let speed = Math.round(response.data.wind.speed);
   windElement.innerHTML = speed + "km/h";
+
+  let weatherDescriptionElement = document.querySelector(
+    "#weather-description"
+  );
+  weatherDescriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 function retrievePosition(position) {

@@ -115,3 +115,9 @@ li {
 .source-code {
   text-align: center;
 }
+.details {
+  display: block;
+}
+.details:first-letter {
+  text-transform: capitalize;
+}
