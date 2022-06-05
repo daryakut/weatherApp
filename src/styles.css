@@ -50,7 +50,7 @@ h1 {
   position: relative;
   top: -34px;
 }
-.precipitation {
+.humidity {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -63,7 +63,9 @@ h1 {
   line-height: 20px;
   font-family: arial, sans-serif;
 }
-
+li {
+  list-style: none;
+}
 .search-form {
   margin-bottom: 20px;
 }

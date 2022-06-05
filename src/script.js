@@ -67,12 +67,19 @@ function onCurrentBtnClick() {
 function showWeather(response) {
   console.log(response);
   celsiusTemperature = Math.round(response.data.main.temp);
+
   let cityName = document.querySelector("#cityName");
   cityName.innerHTML = `${response.data.name}`;
 
   let temp = document.querySelector("#temperatur");
-  // let temperature = Math.round(celsiusTemperature);
   temp.innerHTML = `${celsiusTemperature}°`;
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = `${response.data.main.humidity}%`;
+
+  let windElement = document.querySelector("#wind");
+  let speed = Math.round(response.data.wind.speed);
+  windElement.innerHTML = speed + "km/h";
 }
 
 function retrievePosition(position) {
