@@ -15,7 +15,7 @@
   <body>
     <div class="container">
       <div class="weather">
-        <header>
+        <!-- <header>
           <ul class="items">
             <li class="item">
               <a href="/berlin">Berlin</a>
@@ -30,7 +30,7 @@
               <a href="/san-francisco">San Francisco</a>
             </li>
           </ul>
-        </header>
+        </header> -->
         <form class="search-form" id="searchCity">
           <div class="row">
             <div class="col-8">
@@ -86,42 +86,31 @@
             <div class="humidity">
               <br />
               <ul>
-                <li>Humidity: <span id="humidity">10%</span></li>
                 <br />
+                <li>Humidity: <span id="humidity">10%</span></li>
                 <li>Wind: <span id="wind"> 5km/h</span></li>
               </ul>
             </div>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-sm-2">
-            <div class="forecast-day">Mon</div>
-            <div class="emoji">☀️</div>
-            <div class="forecast-temperature">20°</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="forecast-day">Tue</div>
-            <div class="emoji">☀️</div>
-            <div class="forecast-temperature">18°</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="forecast-day">Wen</div>
-            <div class="emoji">☁️</div>
-            <div class="forecast-temperature">19°</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="forecast-day">Thu</div>
-            <div class="emoji">🌧️</div>
-            <div class="forecast-temperature">22°</div>
-          </div>
-          <div class="col-sm-2">
-            <div class="forecast-day">Fri</div>
-            <div class="emoji">☁️</div>
-            <div class="forecast-temperature">20°</div>
-          </div>
+        <div class="weather-forecast" id="forecast">
+          <!-- <div class="row">
+          <div class="col-2">
+            <div class="weather-forecast-date">Thu</div>
+                <img
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  alt=""
+                  width="42"
+                />
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max"> 18° </span>
+                  <span class="weather-forecast-temperature-min"> 12° </span>
+                </div>
+              </div>
+          </div> -->
         </div>
       </div>
+
       <div class="source-code">
         <small>
           <a href="https://github.com/daryakut/project1.git" target="_blank"
