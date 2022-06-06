@@ -1,4 +1,4 @@
-//fake data
+const apiKey = "bae5c2a82b5d2bbadb52bfe79c8388f8";
 let celsiusTemperature;
 
 function changeFar(event) {
@@ -22,7 +22,6 @@ function changeCel(event) {
 let celClick = document.querySelector("#celsius-link");
 celClick.addEventListener("click", changeCel);
 
-//real time
 let currentTime = new Date();
 
 function formatDate(date1) {
@@ -48,7 +47,7 @@ time.innerHTML = formatDate(currentTime);
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   return days[day];
 }
@@ -58,7 +57,6 @@ function displayForecast(response) {
   console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = "say smth";
-
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
@@ -94,11 +92,8 @@ function displayForecast(response) {
 function changeCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#searchCityInput");
-  let apiKey = "bae5c2a82b5d2bbadb52bfe79c8388f8";
-
   let city = cityInput.value;
   let urlKeyCity = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
   axios.get(urlKeyCity).then(showWeather);
 }
 
@@ -115,7 +110,6 @@ function onCurrentBtnClick() {
 
 function getForecast(coordinates) {
   console.log(coordinates);
-  let apiKey = "bae5c2a82b5d2bbadb52bfe79c8388f8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
@@ -153,7 +147,6 @@ function showWeather(response) {
 
 function retrievePosition(position) {
   console.log(position);
-  let apiKey = "bae5c2a82b5d2bbadb52bfe79c8388f8";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   console.log(lat);
@@ -163,9 +156,8 @@ function retrievePosition(position) {
 }
 
 function search(city) {
-  let apiKey = "bae5c2a82b5d2bbadb52bfe79c8388f8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(showWeather);
 }
 
-// displayForecast();
+search("london");
